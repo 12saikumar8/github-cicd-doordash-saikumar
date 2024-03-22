@@ -18,6 +18,9 @@ def lambda_handler(event, context):
         print('Bucket ->', bucket)
         print('Key ->', key)
 
+        print("Hello")
+
+
         # Use boto3 to get the JSON file from S3
         response = s3_client.get_object(Bucket=bucket, Key=key)
         file_content = response["Body"].read().decode("utf-8")
